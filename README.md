@@ -55,11 +55,12 @@ After running EnigmaLang, your `test_code` directory will contain:
 - `helloworld_bytecode`: The encrypted bytecode of the obfuscated script.
 - `helloworld_decryption_stub.py`: A Python script that, to debugging.
 - `helloworld.py`: The original script (unchanged).
+- `key.txt`: A file containing the secret 256 bit long to decrypt the code.
 
 To execute the encrypted script, simply run the decryption stub:
 
 ```bash
-python helloworld_obfuscated.py <SecretWord> <EncryptionIterations>
+python helloworld_obfuscated.py 
 ```
 
 ## Project Structure
@@ -77,6 +78,7 @@ EnigmaLang/
     ├── helloworld_decryption_stub.py
     ├── helloworld_obfuscated.py
     └── helloworld.py
+    └── key.txt    
 ```
 
 ## Contributing
