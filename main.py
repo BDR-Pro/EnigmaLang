@@ -172,9 +172,9 @@ import base64
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 import sys
-
+key = "{my_word}"
 def decrypt_and_execute_{unique_id}(encrypted_code_hex):
-    key_bytes = bytes.fromhex("{key}")
+    key_bytes = bytes.fromhex(key)
     encrypted_data_bytes = bytes.fromhex(encrypted_code_hex)
     iv = encrypted_data_bytes[:AES.block_size]
     cipher = AES.new(key_bytes, AES.MODE_CBC, iv)
